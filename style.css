@@ -1,0 +1,360 @@
+/* Taille du body et bordure suppérieure */
+
+body 
+{
+	font-family : Tahoma, Geneva, Kalimati, sans-serif;
+	margin: 1% 0 ;
+	border-style: solid;
+    border-width: 2px 0 0 0;
+	padding: 10px 0 ;
+	border-color: #BDBDBD;
+}
+
+/* ===== CSS du bandeau haut de page ===== */
+
+/* Position et taille du logo */ 
+
+#logo
+{
+    display: inline-block;
+	height: 30px;
+	
+}
+
+/* ajoute une marge pour les logos et menus */ 
+.header
+{
+	margin : 0 7% 15px  ;
+}
+
+
+/* titre sous logo */ 
+
+
+strong
+{
+	font-size: 0.6em;
+}
+
+/* === CSS du menu de navigation === */ 
+
+/* mise en ligne et allignement à droite */ 
+#bouton_menu
+{
+	display : none;
+}
+
+nav
+{
+    display: inline-block;
+    float : right;
+	z-index: 10;
+	
+	
+}
+
+nav ul
+{
+    list-style-type: none;
+
+}
+
+nav li
+{
+    display: inline-block;
+    margin-right: 15px;
+}
+
+nav a
+{
+    font-size: 1em;
+    padding-bottom: 3px;
+    text-decoration: none;
+	color : black;
+	
+}
+
+nav a:hover
+{
+    border-bottom: 1px solid ;
+	color : #04B404;
+}
+
+nav img
+{
+	width: 17px;
+	vertical-align : bottom;
+}
+
+
+
+
+/* ===== CSS de la section ===== */
+
+/* positionement du texte sur la vidéo */ 
+article
+{
+	position:relative;
+	min-height : 500px;
+	overflow: hidden;
+}
+
+article H1
+{
+	font-size: 3em;
+}
+
+article .texte
+{ 
+	position:absolute;
+	z-index: 2;
+	text-align :center;
+	color : white;
+	margin-top: 5%;
+	margin-bottom : 5%;
+		
+}
+
+article p
+{
+	font-size: 1.2em;
+	margin : 30px;
+	
+}
+
+article a
+{
+	color : white;
+	font-size: 1.5em;
+	text-decoration: none;
+	background-color : #04B404;
+	padding : 10px ;
+	margin : 15px;
+	border-radius: 3px;
+}
+article a:hover
+{
+	 background-color : #01DF01;
+}
+
+
+/* mise en place de la vidéo en fond */ 
+
+video#bgvid 
+{
+	
+	position:absolute;
+	top:0;
+	right: 0;
+	width: 100%;
+	background-size: cover;
+	z-index: -1;
+	
+}
+
+
+/* partie sous la video */ 
+
+
+aside
+{
+	background-image : url("../media/img/node-overlay-grey.png");
+	text-align : center;
+	min-height: 200px;
+	border-style: solid;
+    border-width:  0 0 2px 0;
+	padding: 10px 0 ;
+	border-color: #F2F2F2;
+	
+}
+
+
+#mmi_blanc
+{
+width: 100px;
+}
+
+
+
+
+/* ===== CSS du pied de page ===== */
+footer  
+{
+	margin : 1% 7% 0 7%;	
+}
+
+footer p 
+{
+	display : inline-block;
+	float : left;
+	
+}
+
+footer img
+{	
+	width: 30px;
+	float : right;
+	display: inline-block;
+    
+	margin-right: 2px;
+	
+}
+/* ===== CSS pour autres supports ===== */
+
+@media all and (max-width: 1024px)
+{
+	
+    nav
+	{
+		width: auto;
+		text-align: left;
+	}
+    
+    nav li
+	{
+		display: block;
+		padding: 4px;
+	}
+    
+    nav a
+	{
+		font-size: 1.5em;
+		
+	}
+    
+    nav a:hover
+	{
+		border-bottom: 0;
+	}
+	
+	
+	article H1
+	{
+		font-size: 1.5em;
+	}
+	
+   
+}
+
+@media all and (max-width: 900px)
+{
+    
+    nav a
+	{
+		font-size: 1.2em;
+		
+	}
+    article
+	{
+		min-height : 300px;
+		background-image:url("../media/img/fond_video.png");
+		background-size : 700px;
+		background-repeat : no-repeat;
+	}
+	
+	article H1
+	{
+		font-size: 1em;
+	}
+	article P
+	{
+		font-size: 0.8em;
+	}
+	article a
+	{
+		font-size: 0.8em;
+	}
+	video#bgvid 
+	{
+		display : none
+		
+	}
+   
+}
+@media all and (max-width: 800px)
+{
+    
+    nav a
+	{
+		font-size: 1.2em;
+			
+	}
+    	
+	article H1
+	{
+		font-size: 1em;
+		
+	}
+	article p
+	{	
+		font-size: 0.8em;
+	}
+	article a
+	{
+		font-size: 0.8em;
+	
+	}
+	
+   
+}
+
+@media all and (max-width: 700px)
+{
+	#bouton_menu
+	{
+		width : auto;
+		display : block;
+	}
+	
+	 nav ul 
+	{
+	 margin:0;
+	 padding:0;
+	 list-style-type:none;
+	 text-align:center;
+	 }
+	 
+	nav li 
+	{
+	 float:left;
+	 margin:auto;
+	 padding:0;
+	 }
+	 
+	nav li a 
+	{
+	 display:block;
+	 width:auto;
+	 padding:5px;
+
+	 }
+	 
+ 
+	  nav li li a:hover
+	  {
+		
+		border-bottom: 3px solid ;
+	 }
+	 
+	 
+	nav ul li ul 
+	{
+	 display:none;
+	 
+	 }
+	 
+	 nav ul li:hover ul 
+	 {
+	 
+	 background-color : white;
+	 }
+	 
+
+	 
+
+	 
+
+	 
+	 
+	   
+}
